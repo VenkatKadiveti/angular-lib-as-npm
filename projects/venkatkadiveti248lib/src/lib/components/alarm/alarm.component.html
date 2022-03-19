@@ -1,0 +1,28 @@
+<div class="d-flex flex-row p-3" >
+    <!-- <div class="d-flex flex-column p-3" *ngFor="let a of alrmList" >
+        <span> {{a.time}} </span>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" [checked]="a.enable">
+          </div>
+    </div> -->
+    <div>
+        <h4>Create Alram</h4>
+        <div class=" d-flex flex-row justify-content-center ">
+            <input style="height: 40px;margin-right: 25px;" [(ngModel)]="hour" type="number" min="0" max="12">
+            <input style="height: 40px;margin-right: 25px;" [(ngModel)]="min"  type="number" min="0" max="59">
+            <select style="height: 40px;margin-right: 25px;" [(ngModel)]="period" class="form-select" aria-label="Default select example">
+                <option value="AM" selected>AM</option>
+                <option value="PM">PM</option>
+              </select>
+              <button (click)="create()" type="button" style="height: 40px;margin-right: 25px;"  class="btn btn-primary">Creat</button>
+        </div>
+    </div>
+    <div>
+        <h4>{{timmer}}</h4>
+    </div>
+</div>
+
+
+<div class="alert alert-danger" *ngIf="isError" role="alert">
+   Alarm time is less then present time.
+  </div>

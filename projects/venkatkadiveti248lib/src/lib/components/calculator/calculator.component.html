@@ -1,0 +1,39 @@
+<div class="d-flex flex-row p-8">
+    <div class="card">
+        <h5 class="card-header" style="background: #f2700c;">Calculator</h5>
+        <div class="card-body">
+          <h5 class="card-title">{{expressionStr || 0}}</h5>
+         <div class="d-flex flex-column p-2">
+            <div class="d-flex flex-row p-2">
+                <span (click)="equation(7)" class="calcNum justify-content-center">7</span>
+                <span (click)="equation(8)" class="calcNum justify-content-center">8</span>
+                <span (click)="equation(9)" class="calcNum justify-content-center">9</span>
+                <span (click)="equation('%')" class="calcNum justify-content-center">%</span>
+            </div>
+            <div class="d-flex flex-row p-2">
+                <span (click)="equation(4)" class="calcNum justify-content-center">4</span>
+                <span (click)="equation(5)" class="calcNum justify-content-center">5</span>
+                <span (click)="equation(6)" class="calcNum justify-content-center">6</span>
+                <span (click)="equation('*')" class="calcNum justify-content-center">x</span>
+            </div>
+            <div class="d-flex flex-row p-2">
+                <span (click)="equation(1)" class="calcNum justify-content-center">1</span>
+                <span (click)="equation(2)" class="calcNum justify-content-center">2</span>
+                <span (click)="equation(3)" class="calcNum justify-content-center">3</span>
+                <span (click)="equation('-')" class="calcNum justify-content-center">-</span>
+            </div>
+            <div class="d-flex flex-row p-2">
+                <span (click)="equation(0)" class="calcNum justify-content-center">0</span>
+                <span (click)="equation('.')" class="calcNum justify-content-center">.</span>
+                <span (click)="equation('+')" class="calcNum justify-content-center">+</span>
+                <span (click)="eval()" class="calcNum justify-content-center">=</span>
+            </div>
+         </div>
+        </div>
+    </div>
+    <div style="margin-left: 20px;">
+        <h4>Result ({{expressionStr}})</h4>
+        <span>{{result}}</span>
+    </div>
+</div>
+

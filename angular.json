@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "venkatkadiveti248lib": {
+      "projectType": "library",
+      "root": "projects/venkatkadiveti248lib",
+      "sourceRoot": "projects/venkatkadiveti248lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/venkatkadiveti248lib/tsconfig.lib.json",
+            "project": "projects/venkatkadiveti248lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/venkatkadiveti248lib/src/test.ts",
+            "tsConfig": "projects/venkatkadiveti248lib/tsconfig.spec.json",
+            "karmaConfig": "projects/venkatkadiveti248lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/venkatkadiveti248lib/tsconfig.lib.json",
+              "projects/venkatkadiveti248lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "venkatkadiveti248lib"
+}

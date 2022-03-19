@@ -1,0 +1,10 @@
+<div class="d-flex flex-row">
+    <div class="d-flex flex-column justify-content-start sidenav">
+        <span class="p-2 flex-fill menuItems" (click)="navigate('/lib/calc')" >Calculate</span>
+        <span class="p-2 flex-fill  menuItems" (click)="navigate('/lib/timer')">Timer</span>
+        <span class="p-2 flex-fill menuItems" (click)="navigate('/lib/alarm')">Alarm</span>
+    </div>
+    <div class="p-2 flex-fill page">
+        <router-outlet></router-outlet>
+    </div>
+</div>
